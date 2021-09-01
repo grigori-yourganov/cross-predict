@@ -1,1 +1,1 @@
-# cross-predict
+This program takes two data sets, each containing several predictors and one outcome variable. It uses one dataset for training and another for testing, and then uses the second dataset for training and first one for testing. It also predicts the outcomes within a dataset using leave-one-out cross-validation. PRediction is done with linear-kernel support vector regression. Data sets are not provided. If you want to run the program on your datasets, make sure all variables are scaled to [0...1] range.
