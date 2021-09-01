@@ -42,22 +42,22 @@ test_names = txt2 (subj_idx, 1);
 
 fprintf ('*******\n\nTraining on %s and predicting %s: \nr = %.4f (p = %g)\n', filename1, filename2, r12, p12);
 fprintf ('\nBeta weights for predicting %s from %s:\n', filename2, filename1);
-%print_beta_weights (beta12, txt1(1, 2:size(txt1, 2)-1));
+print_beta_weights (beta12, txt1(1, 2:size(txt1, 2)-1));
 scatter_plot (test_labels, pred12, ['Training on ' filename1 ', predicting ' filename2]);
 
 fprintf ('*******\n\nTraining on %s and predicting %s: \nr = %.4f (p = %g)\n', filename2, filename1, r21, p21);
 fprintf ('\nBeta weights for predicting %s from %s:\n', filename1, filename2);
-%print_beta_weights (beta21, txt1(1, 2:size(txt1, 2)-1));
+print_beta_weights (beta21, txt1(1, 2:size(txt1, 2)-1));
 scatter_plot (train_labels, pred21, ['Training on ' filename2 ', predicting ' filename1]);
 
 fprintf ('*******\n\nPredicting %s using leave-one-out: \nr = %.4f (p = %g)\n', filename1, r11, p11);
 fprintf ('\nBeta weights for predicting %s using leave-one-out:\n', filename1);
-%print_beta_weights (beta11, txt1(1, 2:size(txt1, 2)-1));
+print_beta_weights (beta11, txt1(1, 2:size(txt1, 2)-1));
 scatter_plot (train_labels, pred11, [filename1 ', leave one out']);
 
 fprintf ('*******\n\nPredicting %s using leave-one-out: \nr = %.4f (p = %g)\n', filename2, r22, p22);
 fprintf ('\nBeta weights for predicting %s using leave-one-out:\n', filename2);
-%print_beta_weights (beta22, txt2(1, 2:size(txt1, 2)-1));
+print_beta_weights (beta22, txt2(1, 2:size(txt1, 2)-1));
 scatter_plot (test_labels, pred22, [filename2 ', leave one out']);
 
 %for i = 1:length(test_labels)
